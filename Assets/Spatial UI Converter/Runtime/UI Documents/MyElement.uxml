@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="MyElement.uss" />
+    <ui:Button text="Button1" display-tooltip-when-elided="true" name="1" style="width: auto; height: 85px; position: relative;" />
+    <ui:Label text="abcd" display-tooltip-when-elided="true" enable-rich-text="true" style="font-size: 20px;" />
+    <ui:Button text="Button" display-tooltip-when-elided="true" style="height: 67px;" />
+</ui:UXML>

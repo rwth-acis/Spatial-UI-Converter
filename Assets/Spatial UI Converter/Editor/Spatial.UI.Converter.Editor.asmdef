@@ -1,0 +1,16 @@
+{
+    "name": "Spatial.UI.Converter.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Spatial.UI.Converter.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
