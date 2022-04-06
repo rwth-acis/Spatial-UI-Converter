@@ -15,5 +15,6 @@ MonoBehaviour:
   uxmlToConvert: {fileID: 9197481963319205126, guid: c24578096920af7429371b5a348ca5dd, type: 3}
   styleSheets:
   - {fileID: 7433441132597879392, guid: a93bb0fe254bbe54bbf05e449dcc9b4c, type: 3}
+  toggleType: 0
   preserveAspectRatio: 1
-  backplateSize: {x: 10, y: 4.9452267}
+  backplateSize: {x: 30, y: 18.839426}
