@@ -1,9 +1,22 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="MyElement.uss" />
-    <ui:Button text="Button1" display-tooltip-when-elided="true" name="1" style="width: auto; height: 85px; position: relative;" />
-    <ui:Label text="Label" display-tooltip-when-elided="true" enable-rich-text="true" />
-    <ui:Toggle label="Toggle" value="false" />
+    <ui:Button text="Button1" display-tooltip-when-elided="true" name="1" style="width: 356px; height: 41px; position: relative;" />
+    <ui:Label text="Label" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-font-style: bold-and-italic;" />
+    <ui:Toggle label="Toggle" value="false" style="-unity-font-style: normal;" />
     <ui:Slider picking-mode="Ignore" label="Slider" value="0" high-value="100" direction="Horizontal" inverted="false" show-input-field="true" style="height: auto; width: auto;" />
-    <ui:SliderInt picking-mode="Ignore" label="SliderInt" value="0" high-value="10" show-input-field="false" />
+    <ui:SliderInt picking-mode="Ignore" label="SliderInt" value="6" high-value="10" style="height: 36px; width: 357px;" />
+    <ui:ScrollView name="ScrollView" style="height: 42px; width: 368px;">
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+    </ui:ScrollView>
+    <ui:Foldout text="Foldout" value="false">
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+    </ui:Foldout>
     <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" text="filler text" />
+    <ui:VisualElement style="align-items: stretch; flex-direction: row; justify-content: space-between;">
+        <ui:Button text="Button" display-tooltip-when-elided="true" style="height: 29px; width: 156px;" />
+        <ui:Toggle label="Toggle" />
+    </ui:VisualElement>
 </ui:UXML>

@@ -16,5 +16,10 @@ MonoBehaviour:
   styleSheets:
   - {fileID: 7433441132597879392, guid: a93bb0fe254bbe54bbf05e449dcc9b4c, type: 3}
   toggleType: 0
+  scrollViewDirection: 0
   preserveAspectRatio: 1
-  backplateSize: {x: 30, y: 18.839426}
+  showFoldoutObjectCollection: 1
+  showResultNotice: 1
+  showControlBackplate: 1
+  backplateSize: {x: 30, y: 24.801273}
+  foldoutCellSize: {x: 3.2, y: 3.2}

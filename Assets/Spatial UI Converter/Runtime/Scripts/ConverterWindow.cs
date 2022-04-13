@@ -9,6 +9,7 @@ namespace SpatialUIConverter {
     public class ConverterWindow : EditorWindow {
 
         private static Converter converter;
+        private static VisualElement root;
         private TemplateContainer uiToConvert;
 
         public static void ShowWindow(Converter converter) {
@@ -17,18 +18,10 @@ namespace SpatialUIConverter {
             wnd.titleContent = new GUIContent("Spatial UI Converter");
         }
 
-        public void OnEnable() {
-/*            converter = AssetDatabase.LoadAssetAtPath<Converter>("Assets/Spatial UI Converter/Converter.asset");
-            if (converter == null) {
-                Debug.LogError("You haven't create a converter yet. Please create a Spatial UI Converter under using the \"Create \" menu ");
-            }*/
-        }
-
         public void CreateGUI() {
 
             // Each editor window contains a root VisualElement object
-            VisualElement root = rootVisualElement;
-            VisualElement toConvertUIcontainer = root.Q<VisualElement>("uiContainer");
+            root = rootVisualElement;
 
             // Import UXML
             var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Spatial UI Converter/Runtime/UI Documents/ConverterWindow.uxml");
@@ -48,14 +41,29 @@ namespace SpatialUIConverter {
                 windowUI.Q<VisualElement>(name: "uiToConvert").Add(uiToConvert);
             }
             else {
+                uiToConvert = null;
                 Debug.LogError("The UXML to convert is not set in the converter");
             }
-            
+
             // Register Callbacks
             Button convertButton = windowUI.Q<Button>(name: "convertButton");
             convertButton.clickable.activators.Add(new ManipulatorActivationFilter { button = MouseButton.LeftMouse });
             convertButton.clicked += converter.Convert;
         }
 
+        public static void ShowResultNotice(List<string> noticeMessage) {
+            Label result = root.Q<Label>(name: "resultLabel");
+            result.text = noticeMessage[0];
+            if (noticeMessage[0] == "Conversion Succeed") {
+                result.style.color = Color.green;
+            }
+            else {
+                result.style.color = Color.red;
+            }
+            Label notice = root.Q<Label>(name: "noticeLabel");
+            for (int i = 1; i < noticeMessage.Count; i++) {
+                notice.text += noticeMessage[i] + "\n\n";
+            }
+        }
     }
 }

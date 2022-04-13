@@ -1,9 +1,10 @@
 Label {
     font-size: 20px;
     -unity-font-style: bold;
-    color: rgb(0,255,0);
+    color: rgb(0, 255, 0);
+    display: flex;
 }
 
-Button{
-    color: rgb(0,255,0);
+Button {
+    color: rgb(0, 255, 0);
 }
