@@ -27,6 +27,9 @@ Especially, ListView, MinMaxSlider, IMGUIContainer, and Scroller are not support
 
 ## How To Use
 
+### Get the Package
+You can directly download it in Github under Release, or search for "Spatial UI Converter" the Unity Package Manager.
+
 ### Create a Converter
 The Converter is basically a `ScriptableObject`. You can use the menu item _Assets/Create/Spatial UI Converter/Converter_ to create it anywhere in your Assets folder. 
 
