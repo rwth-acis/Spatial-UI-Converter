@@ -25,6 +25,8 @@ Due to technical limitations, Foldout is converted to an Object Collection that 
 
 Especially, ListView, MinMaxSlider, IMGUIContainer, and Scroller are not supported. For ListView, you can directly use ScrollView, but you might need to write the Callbacks by yourself. For MinMaxSlider, you can use two text field. For Scroller, you can use ScrollView or Slider. IMGUI (Editor GUI) is not considered here.
 
+Besides, the application can automatically convert texts on Labels, Buttons, etc. It supports font size, color, alighment and style (bold/italic).
+
 ## How To Use
 
 ### Get the Package
