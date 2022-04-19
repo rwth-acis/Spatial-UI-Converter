@@ -1,0 +1,30 @@
+{
+  "name": "com.i5.spatial_ui_converter",
+  "version": "1.0.0",
+  "displayName": "i5 Spatial UI Converter",
+  "description": "This package provides an application that can convert 2D VisualElement-based UI to spatial UI with MRTK prefabs in Unity for Mixed Reality applications.",
+  "unity": "2020.3",
+  "unityRelease": "24f1",
+  "dependencies": {
+    "com.microsoft.mixedreality.toolkit.foundation": "2.7.3",
+    "com.microsoft.mixedreality.toolkit.tools": "2.7.3",
+    "com.microsoft.mixedreality.toolkit.examples": "2.7.3",
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.ui": "1.0.0-preview.18",
+    "com.unity.ui.builder": "1.0.0-preview.18"
+  },
+  "keywords": [
+    "Unity",
+    "UI",
+    "Conversion",
+    "rwth-acis",
+    "i5",
+    "RWTH",
+    "Mixed Reality"
+  ],
+  "author": {
+    "name": "Yanxi Liu\nAdvanced Community Information Systems\nInformatik 5, RWTH Aachen University",
+    "url": "http://dbis.rwth-aachen.de/cms"
+  },
+  "samples": []
+}
