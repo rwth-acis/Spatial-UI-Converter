@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:PropertyField name="uxmlToConvert" binding-path="uxmlToConvert" style="height: auto; flex-grow: 0; width: auto;" />
+    <uie:PropertyField name="styleSheet" binding-path="styleSheets" style="height: auto; width: auto;" />
+    <uie:PropertyField name="toggleType" binding-path="toggleType" />
+    <uie:PropertyField name="scrollViewDirection" binding-path="scrollViewDirection" />
+    <uie:PropertyField name="preserveAspectRatio" binding-path="preserveAspectRatio" style="display: flex;" />
+    <uie:PropertyField name="showFoldoutObjectCollection" binding-path="showFoldoutObjectCollection" />
+    <uie:PropertyField name="showControlBackplate" binding-path="showControlBackplate" />
+    <uie:PropertyField name="backplateSize" binding-path="backplateSize" />
+    <uie:PropertyField name="backplateWidth" binding-path="backplateWidth" />
+    <uie:PropertyField name="foldoutCellSize" binding-path="foldoutCellSize" />
+    <ui:Button text="Open Converter Window" display-tooltip-when-elided="true" name="openWindowButton" style="height: 26px; white-space: normal;" />
+</ui:UXML>
