@@ -24,7 +24,7 @@ namespace i5.SpatialUIConverter {
             root = rootVisualElement;
 
             // Import UXML
-            var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(ConverterUtilities.ConverterPackageRootPath + "/Runtime/UI Documents/ConverterWindow.uxml");
+            var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(ConverterUtilities.ConverterPackageUIDocumentPath + "/ConverterWindow.uxml");
             var windowUI = visualTree.CloneTree();
             root.Add(windowUI);
 
