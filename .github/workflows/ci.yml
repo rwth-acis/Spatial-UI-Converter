@@ -1,0 +1,21 @@
+
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+    - main
+
+jobs: 
+  pushUpm:
+    name: Publish UPM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2      
+        with:
+          fetch-depth: 0
+      - name: push to UPM branch
+        run: ubuntu-latest
+          git subtree push --prefix "$PKG_ROOT" origin upm
+        env:
+          PKG_ROOT: Assets/i5 Spatial UI Converter
