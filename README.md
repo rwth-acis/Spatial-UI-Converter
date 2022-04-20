@@ -21,9 +21,9 @@ The application is aimed to reduce the effort for developers on constructing spa
  - Foldout: [Object Collection](https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-collection?view=mrtkunity-2021-05)
  - VisualElement as container (not any of other controls)
 
-Due to technical limitations, Foldout is converted to an Object Collection that displays beside the converted UI. The place for Foldout is replaced by a button. By clicking it, one can open or close the Object Collection.
+Due to technical limitations, Foldout is converted to an Object Collection that displays beside the converted UI. The place for Foldout is replaced by a button. By clicking it, one can open or close the Object Collection. You can set the cell size on the inspector of the converter. The original layout on UXML files will not be retained.
 
-Especially, ListView, MinMaxSlider, IMGUIContainer, and Scroller are not supported. For ListView, you can directly use ScrollView, but you might need to write the Callbacks by yourself. For MinMaxSlider, you can use two text field. For Scroller, you can use ScrollView or Slider. IMGUI (Editor GUI) is not considered here.
+Especially, ListView, MinMaxSlider, IMGUIContainer, and Scroller are not supported. For ListView, you can directly use ScrollView, but you might need to write the Callbacks by yourself. For MinMaxSlider, you can use two text field. For Scroller, you can use ScrollView or Slider. IMGUIContainer is not considered here, since it is used for Editor GUI.
 
 Besides, the application can automatically convert texts on Labels, Buttons, etc. It supports font size, color, alighment and style (bold/italic).
 
@@ -42,5 +42,6 @@ First, you need to assign your UI Toolkit template (UXML) and possibly also styl
 - The converter does not guarantee a suitable (position/scale) value on Z axis. 
 - The converter does not guarantee a suitable font size for labels and text fields.
 - Some controls have special cases that you need to take care of. If you are not familiar with them, please read the notice message carefully after you clicked the `Convert` button. It is displayed at the lower part of the converter window.
+- Scrolling Object Collection can cause problems on the Buttons' "IconAndText", which is a limitation of MRTK. You need to disable different type of icons, or it will not be displayed correctly.
 - The layout of the converted UI depends on the layout of your 2D UI in the converter window, not in the UI Builder. If you set some properties to "auto", make sure the layout in the converter window is what you really want.
 - If you do not use the correct MRTK version, it will still work in most cases. However, some prefabs possibly cannot be found in some MRTK versions. If you are using a newer version, please write an issue.
