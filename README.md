@@ -6,9 +6,24 @@ The application is aimed to reduce the effort for developers on constructing spa
 
 ### Prerequisities 
  - Recommanded Unity 2020.3.24f1
- - [Microsoft Mixed Reality Toolkit v2.7.3](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/2.7.3) (already included)
+ - [Microsoft Mixed Reality Toolkit v2.7.3](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/2.7.3)
  - [Unity UI Toolkit](https://docs.unity3d.com/2022.2/Documentation/Manual/UIToolkits.html) (already included)
  - [Unity UI Builder](https://docs.unity3d.com/2022.2/Documentation/Manual/UIBuilder.html) (recommanded for building `VisualElement`-based UI, already included)
+ 
+ To make it possible to import MRTK automatically, you need to add the following scoped regestry in `Packages/manifest.json`:
+ ```
+ "scopedRegistries": [
+  {
+    "name": "Microsoft Mixed Reality",
+    "url": "https://pkgs.dev.azure.com/aipmr/MixedReality-Unity-Packages/_packaging/Unity-packages/npm/registry/",
+    "scopes": [
+      "com.microsoft.mixedreality",
+      "com.microsoft.spatialaudio"
+    ]
+  },
+  ...some other scoped registries of your project
+],
+ ```
 
 ### Supported Controls
  - Button: PressableButtonHoloLens2
