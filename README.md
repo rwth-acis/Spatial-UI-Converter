@@ -47,7 +47,7 @@ Besides, the application can automatically convert texts on Labels, Buttons, etc
 ### Get the Package
 You have two ways to install the package for your project:
 - Download the package under "Release" directly on GitHub, and go to `Assets > Import Package > Custom Package` in Unity, and select the downloaded package.
-- Open the Unity Package Manager under `Window > Package Manager` , click on the plus-button and choose "Add package from git url", and enter `https://github.com/rwth-acis/Spatial-UI-Converter.git#[version]`. For example, if you want to use the version v1.0.0, then replace `[version]` by `v1.0.0`. At last, confirm the download by clicking on the "add" button.
+- Open the Unity Package Manager under `Window > Package Manager` , click on the plus-button and choose "Add package from git url", and enter `https://github.com/rwth-acis/Spatial-UI-Converter.git#[version]`. For example, if you want to use the version v1.0.1, then replace `[version]` by `v1.0.1`. At last, confirm the download by clicking on the "add" button.
 
 ### Create a Converter
 The Converter is basically a `ScriptableObject`. You can use the menu item _Assets/Create/Spatial UI Converter/Converter_ to create it anywhere in your Assets folder. 
@@ -63,5 +63,5 @@ There are one sample UXML file and its USS file under `i5 Spatial UI Converter/S
 - The converter does not guarantee a suitable font size for labels and text fields.
 - Some controls have special cases that you need to take care of. If you are not familiar with them, please read the notice message carefully after you clicked the `Convert` button. It is displayed at the lower part of the converter window.
 - Scrolling Object Collection can cause problems on the Buttons' "IconAndText", which is a limitation of MRTK. You need to disable different type of icons, or it will not be displayed correctly.
-- The layout of the converted UI depends on the layout of your 2D UI in the converter window, not in the UI Builder. If you set some properties to "auto", make sure the layout in the converter window is what you really want.
+- The layout of the converted UI depends on the layout of your 2D UI in the converter window, not in the UI Builder. If you set some properties to "auto", make sure the layout in the converter window is what you really want. You might need to adjust the window to get a proper layout.
 - If you do not use the correct MRTK version, it will still work in most cases. However, some prefabs possibly cannot be found in some MRTK versions. If you are using a newer version, please write an issue.
