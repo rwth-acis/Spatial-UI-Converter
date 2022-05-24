@@ -753,7 +753,7 @@ namespace i5.SpatialUIConverter {
                 //We construct a relation between the two initial values of both sides, i.e. font size 0.04 of the TMP (MRTK prefabs) = font size 12 of the VisualElement
                 tmp.fontSize = 0.04f * (ve.resolvedStyle.fontSize / 12);
             }
-            tmp.verticalAlignment = VerticalAlignmentOptions.Middle;
+
             tmp.color = ve.resolvedStyle.color;
             switch (ve.resolvedStyle.unityFontStyleAndWeight) {
                 case FontStyle.Bold:
@@ -767,6 +767,44 @@ namespace i5.SpatialUIConverter {
                     break;
                 default:
                     tmp.fontStyle = FontStyles.Normal;
+                    break;
+            }
+            switch (ve.resolvedStyle.unityTextAlign) {
+                case TextAnchor.UpperCenter:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Top;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Center;
+                    break;
+                case TextAnchor.UpperLeft:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Top;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Left;
+                    break;
+                case TextAnchor.UpperRight:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Top;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Right;
+                    break;
+                case TextAnchor.MiddleCenter:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Middle;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Center;
+                    break;
+                case TextAnchor.MiddleLeft:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Middle;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Left;
+                    break;
+                case TextAnchor.MiddleRight:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Middle;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Right;
+                    break;
+                case TextAnchor.LowerCenter:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Bottom;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Center;
+                    break;
+                case TextAnchor.LowerLeft:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Bottom;
+                    tmp.horizontalAlignment = HorizontalAlignmentOptions.Left;
+                    break;
+                case TextAnchor.LowerRight:
+                    tmp.verticalAlignment = VerticalAlignmentOptions.Bottom;
+                    tmp.horizontalAlignment= HorizontalAlignmentOptions.Right;
                     break;
             }
         }

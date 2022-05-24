@@ -2,11 +2,11 @@
     "name": "i5.SpatialUIConverter.Editor",
     "rootNamespace": "",
     "references": [
-        "i5.SpatialUIConverter.Runtime",
         "Unity.TextMeshPro",
         "Microsoft.MixedReality.Toolkit.SDK",
         "Microsoft.MixedReality.Toolkit",
-        "Microsoft.MixedReality.Toolkit.Services.InputSystem"
+        "Microsoft.MixedReality.Toolkit.Services.InputSystem",
+        "i5.SpatialUIConverter.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -16,11 +16,11 @@
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [
-    {            
-        "name": "com.i5.spatial_ui_converter",
-        "expression": "",
-        "define": "SPATIAL_UI_CONVERTER_PACKAGE"
-    }
+        {
+            "name": "com.i5.spatial_ui_converter",
+            "expression": "",
+            "define": "SPATIAL_UI_CONVERTER_PACKAGE"
+        }
     ],
     "noEngineReferences": false
 }
