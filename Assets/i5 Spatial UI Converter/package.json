@@ -5,6 +5,16 @@
   "description": "This package provides an application that can convert 2D VisualElement-based UI to spatial UI with MRTK prefabs in Unity for Mixed Reality applications.",
   "unity": "2020.3",
   "unityRelease": "24f1",
+  "scopedRegistries": [
+    {
+      "name": "Microsoft Mixed Reality",
+      "url": "https://pkgs.dev.azure.com/aipmr/MixedReality-Unity-Packages/_packaging/Unity-packages/npm/registry/",
+      "scopes": [
+        "com.microsoft.mixedreality",
+        "com.microsoft.spatialaudio"
+      ]
+    }
+  ],
   "dependencies": {
     "com.microsoft.mixedreality.toolkit.foundation": "2.7.3",
     "com.microsoft.mixedreality.toolkit.tools": "2.7.3",
