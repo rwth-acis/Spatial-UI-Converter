@@ -363,7 +363,7 @@ namespace i5.SpatialUIConverter {
                 Vector2 scaleMultiplyFactor = ComputeScaleMultiplyFactor(button); //The multiplied scale towards the root gameObject.
                 float heightWidthRatio = scaleMultiplyFactor.y / scaleMultiplyFactor.x;
                 //Since the buttonBase has same height and width, we can directly use the scaleMultiplyFactor to see on which axis it is stretched.
-                if (scaleMultiplyFactor.x > scaleMultiplyFactor.y) {
+                if (scaleMultiplyFactor.x >= scaleMultiplyFactor.y) {
                     button.transform.Find("IconAndText").localScale = new Vector3(button.transform.localScale.y / button.transform.localScale.x * heightWidthRatio, 1, 1);
                     button.transform.Find("SeeItSayItLabel").transform.localScale = new Vector3(button.transform.localScale.y / button.transform.localScale.x * heightWidthRatio, 1, 1);
                 }
