@@ -423,9 +423,10 @@ namespace i5.SpatialUIConverter {
 
             //Instantiate a label, which corresponds to the label on the right side of the whole VisualElement Slider.
             Label childLabelVE = childVE.Q<Label>();
-            GameObject label = InstantiateLabel(childLabelVE, slider, convertedSizeWholeSlider);
-            label.GetComponent<RectTransform>().localPosition = new Vector3(label.GetComponent<RectTransform>().localPosition.x, label.GetComponent<RectTransform>().localPosition.y, -0.01f);
-
+            if (childLabelVE != null) {
+                GameObject label = InstantiateLabel(childLabelVE, slider, convertedSizeWholeSlider);
+                label.GetComponent<RectTransform>().localPosition = new Vector3(label.GetComponent<RectTransform>().localPosition.x, label.GetComponent<RectTransform>().localPosition.y, -0.01f);
+            }
             //The container of the slider part of the VisualElement "Slider", it may also conatain the TextField of the slider value, if showInputField is set to true.
             VisualElement sliderContainerVE = childVE.Query<VisualElement>().AtIndex(2);
             GameObject sliderContainerGO = new GameObject("SliderContainer");
@@ -477,9 +478,10 @@ namespace i5.SpatialUIConverter {
 
             //Instantiate a label, which corresponds to the label on the right side of the whole VisualElement Slider.
             Label childLabelVE = childVE.Q<Label>();
-            GameObject label = InstantiateLabel(childLabelVE, slider, convertedSizeWholeSlider);
-            label.GetComponent<RectTransform>().localPosition = new Vector3(label.GetComponent<RectTransform>().localPosition.x, label.GetComponent<RectTransform>().localPosition.y, -0.01f);
-
+            if (childLabelVE != null) {
+                GameObject label = InstantiateLabel(childLabelVE, slider, convertedSizeWholeSlider);
+                label.GetComponent<RectTransform>().localPosition = new Vector3(label.GetComponent<RectTransform>().localPosition.x, label.GetComponent<RectTransform>().localPosition.y, -0.01f);
+            }
             //The container of the slider part of the VisualElement "Slider", it may also conatain the TextField of the slider value, if showInputField is set to true.
             VisualElement sliderContainerVE = childVE.Query<VisualElement>().AtIndex(2);
             GameObject sliderContainerGO = new GameObject("SliderContainer");
@@ -527,12 +529,12 @@ namespace i5.SpatialUIConverter {
             textField.transform.parent = parentGO.transform;
             textField.transform.localPosition = new Vector3(0, 0, -0.5f);
             Vector2 convertedSizeTextField = ResolveTransformAndApply(childVE, textField, BaseSize.Backplate, convertedSizeParent);
-
             //Instantiate a label, which corresponds to the label on the right side of the whole VisualElement TextField.
             Label childLabelVE = childVE.Q<Label>();
-            GameObject label = InstantiateLabel(childLabelVE, textField, convertedSizeParent);
-            label.GetComponent<RectTransform>().localPosition = new Vector3(label.GetComponent<RectTransform>().localPosition.x, label.GetComponent<RectTransform>().localPosition.y, -0.01f);
-
+            if (childLabelVE != null) {
+                GameObject label = InstantiateLabel(childLabelVE, textField, convertedSizeParent);
+                label.GetComponent<RectTransform>().localPosition = new Vector3(label.GetComponent<RectTransform>().localPosition.x, label.GetComponent<RectTransform>().localPosition.y, -0.01f);
+            }
             //Instantiate the input field part.
             GameObject inputField = InstantiateInputField(childVE.Q<VisualElement>(name: "unity-text-input"), textField, convertedSizeTextField);
             inputField.GetComponentInChildren<TMP_InputField>().text = childVE.text;
