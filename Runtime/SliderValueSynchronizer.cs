@@ -1,6 +1,5 @@
 using Microsoft.MixedReality.Toolkit.UI;
 using TMPro;
-using UnityEditor.Events;
 using UnityEngine;
 
 namespace i5.SpatialUIConverter {
@@ -63,11 +62,12 @@ namespace i5.SpatialUIConverter {
             }
         }
 
+#if UNITY_EDITOR
         public void RegisterEvent() {
-            UnityEventTools.AddPersistentListener(slider.OnValueUpdated, OnSliderValueChange);
-            UnityEventTools.AddPersistentListener(tmp_input.onValueChanged, OnValueFieldChange);
+            UnityEditor.Events.UnityEventTools.AddPersistentListener(slider.OnValueUpdated, OnSliderValueChange);
+            UnityEditor.Events.UnityEventTools.AddPersistentListener(tmp_input.onValueChanged, OnValueFieldChange);
         }
-
+#endif
         public void OnSliderValueChange(SliderEventData evt) {
             if (canUpdateValue) {
                 canUpdateValue = false;

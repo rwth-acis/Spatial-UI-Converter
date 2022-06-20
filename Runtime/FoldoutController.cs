@@ -1,12 +1,12 @@
 using Microsoft.MixedReality.Toolkit.UI;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Events;
 using UnityEngine;
 
 namespace i5.SpatialUIConverter {
     public class FoldoutController : MonoBehaviour {
         // Start is called before the first frame update
+
         public void OpenAndCloseObjectCollection() {
             GameObject collection = gameObject.transform.Find("GridObjectCollection").gameObject;
             if (collection.activeSelf) {
@@ -16,10 +16,11 @@ namespace i5.SpatialUIConverter {
                 collection.SetActive(true);
             }
         }
-
+#if UNITY_EDITOR
         public void RegisterEvent() {
-            UnityEventTools.AddPersistentListener(GetComponent<Interactable>().OnClick, OpenAndCloseObjectCollection);
+            UnityEditor.Events.UnityEventTools.AddPersistentListener(GetComponent<Interactable>().OnClick, OpenAndCloseObjectCollection);
         }
+#endif
     }
 }
 
