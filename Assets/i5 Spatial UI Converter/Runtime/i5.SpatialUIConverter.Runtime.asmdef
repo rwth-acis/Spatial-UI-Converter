@@ -5,7 +5,8 @@
         "Microsoft.MixedReality.Toolkit.SDK",
         "Microsoft.MixedReality.Toolkit",
         "Microsoft.MixedReality.Toolkit.Services.InputSystem",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "Test"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
